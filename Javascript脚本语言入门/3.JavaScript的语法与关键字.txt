@@ -1,0 +1,45 @@
+﻿第三课、JavaScript的语法与关键字
+
+1、JavaScript的语法
+
+	1、js的变量区分大小写
+		username userName  这是两个不同的变量
+	2、每行结尾的分号可有可无，如果语句的结束处没有分号，那么js会自动将这行
+		代码的结尾作为语句的结尾。
+		alert("Hello World");
+		alert("Hello World")
+	3、变量是弱类型
+		定义变量时使用var运算符。
+			比如：var username="tom";正确
+			      var age=30;正确
+			      int age=30;错误
+	4、使用大括号标签代码块
+		{  代码 } 被封装在大括号内的语句按照顺序执行。
+
+	5、注释
+		1、单行注释 //
+		    单行注释使用双斜线"//" 开头，在"//"后面的文字即为注释内容，
+		    注释的内容在代码执行过程中不起作用。
+		    var now=new Date();//获取日期对象
+		2、多行注释
+			多行注释以"/*"开头，以"*/"结尾，在两者之间的内容为注释内容，
+			在代码执行过程中不起任何作用。
+			/*
+			*功能：获取当前日期
+			*作者：tom
+			*/
+			function getClock(){
+				//内容
+			}
+2、JavaScript中的关键字
+	var username="tom";
+	关键字不能用作变量名，函数名以及循环标签。
+	abstract  continue  finally    instanceof  private  this
+	boolean   default   float      int         public   throw
+	break     do        for        interface   return   typeof
+	byte      double    function   long        short    true
+	case      else      goto       native      static   var
+	catch     extends   implements new         super    void
+	char      false     import     null        switch   while
+	class     final     in         package     with     synchronized
+

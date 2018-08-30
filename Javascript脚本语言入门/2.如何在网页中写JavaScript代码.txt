@@ -1,0 +1,60 @@
+第二课、如何在网页中写JavaScript
+
+1 在页面中直接嵌入JavaScript
+
+	<script language="javascript">
+		
+		js程序
+
+	</script>
+
+	    js代码可以插入在<head></head>标签中间，也可以放在<body></body>标签中间。
+	最常用的是放在<head></head>
+
+	示例：
+	<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script language="javascript">
+
+		var now=new Date();
+		var year=now.getYear()+1900;
+		var month=now.getMonth()+1;
+		var date=now.getDate();
+		var day=now.getDay();
+		var arr_week=new Array("星期天","星期一","星期二",
+			"星期三","星期四","星期五","星期六");
+		var week=arr_week[day];
+		var time="当前时间："+year+"年"+month+"月"+date+"日 "+week;
+		alert(time);
+	</script>
+	</head>
+
+	<body>
+	</body>
+	</html>
+
+2 引用外部的JavaScript
+ 
+	如果脚本比较复杂或者是同一段代码被很多页面所使用，则可以将这些脚本代码放置
+	在一个单独的文件中，该文件的扩展名是.js，然后在需要使用该代码的web页面中
+	链接该javascript文件即可。
+
+	<script language="javascript" src=".js后缀的文件路径"></script>
+
+	一般写在<head></head>中间比较好
+
+	在.js后缀的文件中，不需要使用<script></script>标签对括起来。
+
+	示例：
+        <html>
+	<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script language="javascript" src="js1.js"></script>
+
+	</head>
+
+	<body onload="getDate()">
+	</body>
+	</html>
