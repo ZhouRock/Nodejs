@@ -1,0 +1,54 @@
+﻿第八课、流程控制之for、while、do-while语句
+
+1、for循环语句
+	语法格式：for(①initialize;②test;④increment){
+			③statement
+		  }
+		  ①->②(true)->③->④->②(true)->③->④->......
+		  ①->②(true)->③->④->②(false) for循环结束
+		  示例：
+		 var sum=0;
+		 for(var i=1;i<=10;i++){
+			sum+=i;
+		 }
+		 alert("总和为："+sum);
+
+2、while循环语句
+
+	while循环的循环体可能一次都不执行。
+
+	语法格式：while(①expression){
+			②statement
+		 }
+		 ①(true)->②->①(true)->②.....
+		 ①(false) 直接终止while循环。
+		 示例：
+		 var sum1=0;
+		 var i=100;
+		 while(i<=1){
+			sum1+=i;
+			i++;
+		 }
+		 alert("while总和为："+sum1);
+
+3、do-while循环语句
+	do-while循环的循环体能够保证至少执行一次。
+	语法格式：
+	do{
+		①statement
+	}while(②expression);
+
+	示例：
+	 var sum2=0;
+	 var i2=1;
+	 do{
+		sum2+=i2;
+		i2++;
+	 }while(i2<=10);
+	 alert("do-while总和为："+sum2);
+
+	while循环是 先判断条件是否成立，然后再根据判断的结果是否执行循环体。也就是
+		说循环体有可能一次都执行不了。
+	do-while循环是 先执行一次循环体，然后再判断条件是否成立。所以不管条件
+		是否成立，至少能够执行一次。
+
